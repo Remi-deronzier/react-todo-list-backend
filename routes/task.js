@@ -29,6 +29,11 @@ app.get("/", async (req, res) => {
   console.log("route : /");
   try {
     const tasks = await Task.find();
+    tasks.sort((task1, task2) => {
+      const bool1 = task1.done;
+      const bool2 = task2.done;
+      return bool1 === bool2 ? 0 : !bool1 ? -1 : 1;
+    });
     res.status(200).json(tasks);
   } catch (error) {
     res.status(400).json({ message: error.message });
