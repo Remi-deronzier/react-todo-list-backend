@@ -12,7 +12,7 @@ Before you begin, ensure you have met the following requirements:
 
 *Option : you can install [Postman](https://www.postman.com/) to easily make requests.*
 
-## Installing Marvel API
+## Installing Todo list API
 
 Clone this repository:
 ```
